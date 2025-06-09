@@ -1,0 +1,268 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberGuard EDU | Defend. Detect. Dominate.</title>
+  <style>
+    /* Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #eee; line-height: 1.6; }
+    a { color: #00bcd4; text-decoration: none; }
+    a:hover { opacity: 0.8; }
+    header { background: #004d40; padding: 20px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
+
+    /* Logo size */
+    header .container img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: #fff; font-weight: 700; }
+    #hero { background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 500px; display: flex; align-items: center; animation: heroFade 10s ease-in-out infinite alternate; }
+    @keyframes heroFade { 0% { filter: brightness(1); } 100% { filter: brightness(0.85); } }
+    #hero .overlay { background: rgba(0,0,0,0.5); padding: 20px; width: 100%; }
+    .btn { background: #00bcd4; padding: 12px 30px; color: #fff; border-radius: 25px; font-weight: 700; transition: background 0.3s ease; display: inline-block; }
+    .btn:hover { background: #0097a7; }
+
+    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    section h2 { font-size: 2rem; margin-bottom: 20px; color: #00bcd4; }
+
+    .services, .programs, .news ul { display: grid; gap: 20px; }
+    .services { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .programs { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .card, .programs .event {
+      background: rgba(255,255,255,0.1); border-radius: 8px; padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,188,212,0.3); transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover, .programs .event:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0,188,212,0.6); }
+    .card img, .programs .event img {
+      width: 60px; margin-bottom: 15px; filter: drop-shadow(0 0 2px #00bcd4);
+      border-radius: 4px;
+    }
+    .programs .event img { width: 100%; height: 180px; object-fit: cover; margin-bottom: 15px; }
+
+    .lab-frame { width: 100%; height: 500px; border: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,188,212,0.3); }
+
+    .news ul { list-style: none; padding: 0; }
+    .news li {
+      display: flex; align-items: center; background: rgba(0,0,0,0.3);
+      border-radius: 8px; padding: 10px; cursor: pointer; transition: background 0.3s;
+    }
+    .news li:hover { background: rgba(0,188,212,0.2); }
+    .news img { width: 100px; height: 70px; object-fit: cover; border-radius: 4px; margin-right: 15px; }
+    .news a { font-size: 1.1rem; font-weight: 600; flex-grow: 1; }
+
+    .contact { text-align: center; }
+    .contact .socials { margin-top: 20px; }
+    .contact .socials a { margin: 0 15px; color: #00bcd4; font-size: 26px; text-decoration: none; }
+    .contact-details { margin-top: 15px; font-size: 1rem; }
+
+    footer { background: #004d40; color: #fff; text-align: center; padding: 20px; margin-top: 60px; }
+
+    @media(max-width:768px){
+      .news li { flex-direction: column; align-items: flex-start; }
+      .news img { width: 100%; margin-bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+   <img src="logo.png.jpg" alt="CyberGuard EDU" style="height:70px; width: 90px;" />
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#virtual-lab">Virtual Lab</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#upcoming-events">Upcoming Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<section id="hero">
+  <div class="overlay">
+    <h1>Welcome to CyberGuard EDU</h1>
+    <p>Defend. Detect. Dominate.Empowering you with real-world cybersecurity skills</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About CyberGuard EDU</h2>
+  <div class="about">
+  <p>
+    CyberGuard EDU is my passion project to make cybersecurity simple and practical for students. I wanted a place where anyone can learn to protect themselves online with real skills—not just theory. Through virtual labs, workshops, and easy-to-understand content, this platform helps you defend, detect, and dominate cyber threats confidently. It’s made for everyone who uses the internet, because knowing cybersecurity means being safe and strong in today’s digital world. 
+  </p>
+  <p> -MARY SELSIAA</p>
+  </div>
+</section>
+
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <img src="cybersecurity.png" alt="Cybersecurity" />
+      <h3>Cybersecurity Training</h3>
+      <p>Learn to protect networks, data, and systems from cyber threats.</p>
+    </div>
+    <div class="card">
+      <img src="consulting.png" alt="Consulting" />
+      <h3>Consulting Services</h3>
+      <p>Expert advice to help you secure your business infrastructure.</p>
+    </div>
+    <div class="card">
+      <img src="workshops.png" alt="Workshops" />
+      <h3>Workshops & Webinars</h3>
+      <p>Interactive sessions for skill enhancement in cybersecurity.</p>
+    </div>
+  </div>
+</section>
+
+<section id="programs">
+  <h2>Our Programs</h2>
+  <div class="programs">
+    <div class="event">
+      <img src="cyberwarfare.jpg" alt="Cyber Warfare" />
+      <h3>Cyber Warfare Bootcamp</h3>
+      <p>Intensive training on cyber defense and attack techniques.</p>
+    </div>
+    <div class="event">
+      <img src="ethicalhacking.jpg" alt="Ethical Hacking" />
+      <h3>Ethical Hacking Course</h3>
+      <p>Master penetration testing and vulnerability assessments.</p>
+    </div>
+    <div class="event">
+      <img src="forensics.jpg" alt="Digital Forensics" />
+      <h3>Digital Forensics</h3>
+      <p>Learn techniques to investigate cybercrimes and data breaches.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIRTUAL LAB SECTION -->
+<section id="virtual-lab">
+  <h2>Virtual Lab</h2>
+
+  <!-- Embedded Virtual Lab -->
+  <iframe 
+    src="https://virtual-lab-beta-six.vercel.app/" 
+    class="lab-frame" 
+    title="CyberGuard Virtual Lab" 
+    loading="lazy">
+  </iframe>
+</section>
+
+<!-- CSS for iframe -->
+<style>
+  .lab-frame {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+    margin-top: 20px;
+  }
+</style>
+
+
+<section id="blog">
+  <h2>Blog</h2>
+  <div class="blog">
+    <div class="card">
+      <h3>AI-Powered Phishing Attacks Rise Sharply</h3>
+      <p>Cybercriminals are increasingly using AI to create highly convincing phishing emails targeting businesses worldwide.</p>
+      <a href="https://www.csoonline.com/article/3696635/ai-powered-phishing-attacks-rise-sharply.html" target="_blank" rel="noopener noreferrer">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>Zero-Day Exploit Found in Popular VPN Software</h3>
+      <p>A critical zero-day vulnerability was discovered in a widely used VPN client, prompting immediate security updates.</p>
+      <a href="https://www.zdnet.com/article/critical-zero-day-vulnerability-found-in-popular-vpn-software/" target="_blank" rel="noopener noreferrer">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>New Ransomware Strain Targets Healthcare Sector</h3>
+      <p>The latest ransomware attack has disrupted operations in multiple hospitals, highlighting cybersecurity risks in healthcare.</p>
+      <a href="https://www.techradar.com/news/new-ransomware-strain-targets-healthcare-sector" target="_blank" rel="noopener noreferrer">Read More</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="upcoming-events"> 
+  <h2>Upcoming Events</h2>
+  <div class="upcoming-events" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    
+    <div class="card" style="flex: 1 1 300px; max-width: 350px; display: flex; flex-direction: column; justify-content: space-between;">
+      <h3>Cybersecurity Workshop</h3>
+      <p><strong>Date:</strong>2025</p>
+      <p>Hands-on workshop on penetration testing basics and ethical hacking.</p>
+      <div style="text-align: center; margin-top: 15px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0eqzz1peaG26pvxzOFkaTRDYOTaanej8DOzKdhLie01eAKw/viewform" target="_blank" class="btn">Register Now</a>
+      </div>
+    </div>
+
+    <div class="card" style="flex: 1 1 300px; max-width: 350px; display: flex; flex-direction: column; justify-content: space-between;">
+      <h3>Cyber Awareness Seminar</h3>
+      <p><strong>Date:</strong>2025</p>
+      <p>Learn how to protect your personal data and recognize cyber threats.</p>
+      <div style="text-align: center; margin-top: 15px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0eqzz1peaG26pvxzOFkaTRDYOTaanej8DOzKdhLie01eAKw/viewform" target="_blank" class="btn">Register Now</a>
+      </div>
+    </div>
+
+    <div class="card" style="flex: 1 1 300px; max-width: 350px; display: flex; flex-direction: column; justify-content: space-between;">
+      <h3>Capture the Flag Competition</h3>
+      <p><strong>Date:</strong>2025</p>
+      <p>Test your hacking skills in our exciting online CTF challenge.</p>
+      <div style="text-align: center; margin-top: 15px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0eqzz1peaG26pvxzOFkaTRDYOTaanej8DOzKdhLie01eAKw/viewform" target="_blank" class="btn">Register Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-box" style="
+    background: rgba(255,255,255,0.1); 
+    border-radius: 8px; 
+    padding: 30px; 
+    max-width: 600px; 
+    margin: 20px auto; 
+    box-shadow: 0 6px 20px rgba(0,188,212,0.5);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  ">
+    <p><strong>Address:</strong><br />3/1232-1 Balammalnagar,<br />Virudhunagar, Tamil Nadu</p>
+    <p><strong>Email:</strong><br /><a href="mailto:contact@cyberguardedu.com" style="color:#00bcd4;">contact@cyberguardedu.com</a></p>
+    <p><strong>Phone / WhatsApp:</strong><br /><a href="tel:+918438813218" style="color:#00bcd4;">+91 84388 13218</a> | <a href="https://wa.me/918438813218" target="_blank" style="color:#00bcd4;">Chat on WhatsApp</a></p>
+    <p><strong>LinkedIn:</strong><br /><a href="https://www.linkedin.com/in/maryselsiaa1404" target="_blank" style="color:#00bcd4;">linkedin.com/in/YOUR-LINKEDIN-ID</a></p>
+  </div>
+</section>
+
+</section>
+
+<footer>
+  &copy; 2025 CyberGuard EDU. All Rights Reserved.
+</footer>
+
+</body>
+</html>
+
